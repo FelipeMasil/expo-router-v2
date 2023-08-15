@@ -1,15 +1,12 @@
-import { Button, StyleSheet, Text, View } from "react-native";
-import { Link } from 'expo-router'
+import { StyleSheet, Text, View } from "react-native";
 
-export default function Home(){
+
+export default function Profile(){
     return(
         <View style= { styles.viewProps }>
             <Text style= { styles.textProps }>
-                Home
+                Settings
             </Text>
-            <Link href="/product/5" asChild>
-                <Button title="Ver Produto" />
-            </Link>
         </View>
     )
 }

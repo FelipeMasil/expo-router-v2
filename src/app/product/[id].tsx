@@ -1,15 +1,15 @@
 import { Button, StyleSheet, Text, View } from "react-native";
-import { Link } from 'expo-router'
+import { useSearchParams } from 'expo-router'
 
-export default function Home(){
+export default function Product(){
+
+    const { id } = useSearchParams()
     return(
+
         <View style= { styles.viewProps }>
             <Text style= { styles.textProps }>
-                Home
+                Produto: {id}
             </Text>
-            <Link href="/product/5" asChild>
-                <Button title="Ver Produto" />
-            </Link>
         </View>
     )
 }
