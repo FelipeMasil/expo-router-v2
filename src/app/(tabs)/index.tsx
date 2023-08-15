@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import { Link } from 'expo-router'
-import { Button } from "@/components/Button";
+import { Button } from "../../components/Button";
 
 export default function Home(){
     return(
@@ -8,7 +8,9 @@ export default function Home(){
             <Text style= { styles.textProps }>
                 Home
             </Text>
-            <Button title="Configurações" />
+            <Link href="/product/15" asChild>
+                <Button title="Configurações" />
+            </Link>
         </View>
     )
 }

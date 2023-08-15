@@ -1,19 +1,23 @@
+import { forwardRef } from "react";
 import { Text, TouchableOpacity, StyleSheet } from "react-native";
 
 type ButtonProps= {
     title: string
 }
 
-
-export function Button(props: ButtonProps) {
+export const Button= forwardRef<TouchableOpacity, ButtonProps>(({ title,...rest }, ref) => {
     return(
-        <TouchableOpacity style={ styles.tOpacity }>
+        <TouchableOpacity
+        ref= {ref}
+        style={ styles.tOpacity }
+        {...rest}
+        >
             <Text style={ styles.textStyle }>
-                {props.title}
+                {title}
             </Text>
         </TouchableOpacity>
     )    
-}
+})
 
 const styles = StyleSheet.create({
     tOpacity: {
